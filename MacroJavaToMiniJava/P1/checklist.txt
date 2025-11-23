@@ -1,0 +1,25 @@
+Checklist for Assignment P1
+
+1) Have you tarred + gzipped the file as XXXXXXXX.P1.tar.gz (your 8-digit roll number) or zipped it to XXXXXXXX.tgz? YES
+
+2) Does your tar.gz / .tgz file expand (by using the command tar xvzf) to the base directory named XXXXXXXX (your 8-digit roll number), with sub directory named PY within it, and which in turns contains all your files? YES
+
+3) Have you removed the a.out files and other generated files from your tar ball? YES
+
+4) Does the above created P1 contains P1.y, P1.l, that can be compiled using bison -d P1.y; flex P1.l; gcc P1.tab.c lex.yy.c -lfl -o P1? YES
+
+5) Does your generated P1 take input from Standard Input (for usage of redirection) ? YES
+
+6) Does your generated P1 write output to Standard Output (for usage of redirection) ? YES
+
+7) Have you removed all the debugging messages that your program may output? YES
+
+8) Is (some part of) the assignment plagiarized? NO
+
+9) Any comments about your evaluation strategy :
+        I'm assuming that this question asks about how my bison file will Parse the macrojava code and convert it into minijava.
+        i.) Firstly the bison code checks the set of tokens with the macrojava grammar that is given.
+        ii.) If it fails -> Failed to parse macrojava code.
+        iii.) After parsing, as there are no macroexpressions and statements, We should expand every macrocalls into their
+            bodies in the minijava code.
+        iv) This is being done by storing the information of a macro in a struct and then using the info accordingly to expand.
